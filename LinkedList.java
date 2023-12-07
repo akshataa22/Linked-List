@@ -1,18 +1,25 @@
 package Day14;
 
 public class LinkedList {
-    Node head;
+    static Node head;
     Node tail;
+
+    public LinkedList() {
+        this.head = null;
+    }
+
     public void add(int data) {
         Node newNode = new Node(data);
         if (head == null){
-            head = tail = newNode;
+            head = newNode;
         }
         else{
-            Node temp = head;
-            while (temp.next != null){
+            Node temp=head;
+            while (temp.next != null && temp.next.data < data){
+
                 temp = temp.next;
             }
+            newNode.next = temp.next;
             temp.next = newNode;
         }
     }

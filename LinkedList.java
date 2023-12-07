@@ -16,6 +16,7 @@ public class LinkedList {
 
     void display(){
         Node newNode = head ;
+
         while (newNode!=null){
             System.out.println(newNode.data);
             newNode =newNode.next;

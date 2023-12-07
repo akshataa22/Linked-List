@@ -32,4 +32,11 @@ public class LinkedList {
         }
     }
 
+    public void popFirst() {
+        if (head == null) {
+            return;
+        } else {
+            head = head.next;
+        }
+    }
 }

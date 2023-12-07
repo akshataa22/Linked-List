@@ -32,11 +32,17 @@ public class LinkedList {
         }
     }
 
-    public void popFirst() {
+    public void popLast() {
         if (head == null) {
             return;
         } else {
-            head = head.next;
+            Node secondLastNode = head;
+            Node lastNode = head.next;
+            while (lastNode.next != null) {
+                lastNode = lastNode.next;
+                secondLastNode = secondLastNode.next;
+            }
+            secondLastNode.next = null;
         }
     }
 }

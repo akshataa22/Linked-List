@@ -24,4 +24,5 @@ public class LinkedList {
             newNode =newNode.next;
         }
     }
+
 }

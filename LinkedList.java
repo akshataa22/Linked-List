@@ -3,6 +3,7 @@ package Day14;
 public class LinkedList {
     static Node head;
     Node tail;
+    int size;
 
     public LinkedList() {
         this.head = null;
@@ -32,17 +33,20 @@ public class LinkedList {
         }
     }
 
-    public void popLast() {
+    public void search() {
         if (head == null) {
             return;
         } else {
-            Node secondLastNode = head;
-            Node lastNode = head.next;
-            while (lastNode.next != null) {
-                lastNode = lastNode.next;
-                secondLastNode = secondLastNode.next;
+            Node newNode = head;
+            while(newNode!=null){
+                if(newNode.data==30){
+                    System.out.println("30 is present in " +size+ " Node");
+                }
+                newNode = newNode.next;
+                size++;
             }
-            secondLastNode.next = null;
+
         }
+
     }
 }

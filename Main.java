@@ -6,7 +6,7 @@ public class Main {
         l.add(56);
         l.add(70);
         l.add(30);
-        l.popLast();
+        l.search();
 
         l.display();
     }
